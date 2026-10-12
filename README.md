@@ -4,8 +4,9 @@ Controle remoto Android (Kotlin + Compose) para o ar-condicionado Samsung Digita
 
 - Protocolo Samsung A/C portado do [IRremoteESP8266](https://github.com/crankyoldgit/IRremoteESP8266) (`app/src/main/java/com/lukeair/ir/SamsungAc.kt`); cada comando envia o estado completo.
 - Ligar/desligar usa a mensagem estendida de 21 bytes; demais comandos, a de 14 bytes.
+- Widget 4×2 para a tela inicial (energia, −/+, modo, display), sincronizado com o app via `AcController`.
 
 ```sh
 ./gradlew :app:testDebugUnitTest   # valida contra capturas reais
-./gradlew :app:installDebug
+./gradlew :app:installRelease  # R8, bem mais fluido que o debug
 ```
